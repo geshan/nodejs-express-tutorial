@@ -1,0 +1,34 @@
+extends layout
+
+block body-content
+  // Header
+  header#header
+    h1 #{mainText} 
+    p
+      | !{subText}
+  // Signup Form
+  form#signup-form(method='post' action='#')
+    input#email(type='email' name='email' placeholder='Email Address')
+    input(type='submit' value='Sign Up')
+  // Footer
+  footer#footer
+    ul.icons
+      li
+        a.icon.brands.fa-twitter(href='#')
+          span.label Twitter
+      li
+        a.icon.brands.fa-instagram(href='#')
+          span.label Instagram
+      li
+        a.icon.brands.fa-github(href='#')
+          span.label GitHub
+      li
+        a.icon.fa-envelope(href='#')
+          span.label Email
+    ul.copyright
+      li &copy; Untitled.
+      li
+        | Credits: 
+        a(href='http://html5up.net') HTML5 UP
+  // Scripts
+  script(src='/assets/js/main.js')
