@@ -2,6 +2,6 @@
 
 A demo project to show how to build a demo app with Express js and Pug.
 
-### Running on Qovery
+### Deploy on Railway
 
-At: https://main-eventua-a14nhm0hngan6b2y-gtw.qovery.io/
+[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/new/template?template=https%3A%2F%2Fgithub.com%2Fgeshan%2Fnodejs-express-tutorial&referralCode=Tcesg7)
