@@ -107,6 +107,7 @@
 			// Vars.
 				var $form = document.querySelectorAll('#signup-form')[0],
 					$submit = document.querySelectorAll('#signup-form input[type="submit"]')[0],
+					$email = document.querySelectorAll('#signup-form input[type="email"]')[0],
 					$message;
 
 			// Bail if addEventListener isn't supported.
@@ -148,6 +149,23 @@
 						$submit.disabled = true;
 
 					// Process form.
+						fetch("https://submit-form.com/jl0KedfE", {
+							method: "POST",
+							headers: {
+								"Content-Type": "application/json",
+								Accept: "application/json",
+							},
+							body: JSON.stringify({
+								email: $email.value,
+							}),
+						})
+						.then(function (response) {
+							console.log(response);
+							$message._show('success', 'Thank you!');
+						})
+						.catch(function (error) {
+							$message._show('failure', 'Something went wrong. Please try again.');
+						});
 					// Note: Doesn't actually do anything yet (other than report back with a "thank you"),
 					// but there's enough here to piece together a working AJAX submission call that does.
 						window.setTimeout(function() {
@@ -158,9 +176,7 @@
 							// Enable submit.
 								$submit.disabled = false;
 
-							// Show message.
-								$message._show('success', 'Thank you!');
-								//$message._show('failure', 'Something went wrong. Please try again.');
+							// Show message.																
 
 						}, 750);
 
