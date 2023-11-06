@@ -12,6 +12,8 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",
+    "flagsmith-nodejs": "^3.2.0",
+    "node-cache": "^5.1.2",
     "pug": "^3.0.2"
   }
 }
